@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Build2Build</title>
+<link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+                    <!--fonnt Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        :root {
+            --b2b-blue: #007bff;
+        }
+
+        .btn-b2b-primary {
+            background-color: var(--b2b-blue);
+            border-color: var(--b2b-blue);
+            color: white;
+        }
+
+        .btn-b2b-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        /* Navbar background */
+        .navbar-dark {
+            background-color: #1c2d3c !important;
+        }
+
+        /* Fix dropdown list styling */
+        .navbar-nav .dropdown-menu {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark shadow-lg sticky-top">
+        <div class="container-fluid">
+
+            <!-- LOGO + BRAND -->
+            <a class="navbar-brand d-flex align-items-center" href="index.html">
+                <img src="images/logo.jpg" alt="Build2Build Logo" style="height: 40px; margin-right: 10px;">
+                <span class="fw-bold">Build2Build</span>
+            </a>
+
+            <!-- MOBILE TOGGLER -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- NAV LINKS -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+
+                <!-- LINKS (Push this to the right) -->
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="index.html">Home</a>
+                    </li>
+
+                    <!-- Marketplace Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="marketplaceDropdown"
+                           role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Marketplace
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="marketplaceDropdown">
+                            <li><a class="dropdown-item" href="#">Browse Materials</a></li>
+                            <li><a class="dropdown-item" href="#">Browse Tools</a></li>
+                            <li><a class="dropdown-item" href="#">Post Item for Sale</a></li>
+                            <li><a class="dropdown-item" href="#">View Service Listings</a></li>
+                            <li><a class="dropdown-item" href="#">Hire Machine Operators</a></li>
+                            <li><a class="dropdown-item" href="#">Construction Rentals</a></li>
+                            <li><a class="dropdown-item" href="#">Land & Properties</a></li>
+                            <li><a class="dropdown-item" href="#">Transport Services</a></li>
+                        </ul>
+                    </li>
+
+                    <!-- Community Dropdown -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="communityDropdown"
+                           role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Community
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="communityDropdown">
+                            <li><a class="dropdown-item" href="#">Discussion Forum</a></li>
+                            <li><a class="dropdown-item" href="#">Project Showcases</a></li>
+                            <li><a class="dropdown-item" href="#">Find Mentors/Experts</a></li>
+                            <li><a class="dropdown-item" href="#">Contractor Ratings</a></li>
+                            <li><a class="dropdown-item" href="#">Ask a Builder</a></li>
+                            <li><a class="dropdown-item" href="#">DIY Tutorials</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#about">About</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#contact">Contact</a></li>
+                                      <!-- START A PROJECT BUTTON -->
+                    <a href="login.html?redirect=start-project"class="btn btn-warning fw-bold me-2">
+                    START A PROJECT NOW</a> 
+                    </ul>
+
+                <!-- RIGHT SIDE BUTTONS -->
+                <div class="d-flex ms-3">
+
+                    <!-- Register Dropdown -->
+                    <div class="nav-item dropdown me-2">
+                        <button class="btn btn-outline-light dropdown-toggle fw-bold"
+                                type="button" id="registerDropdown"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                            Register
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="registerDropdown">
+                            <li><a class="dropdown-item" href="register.html?type=pro">As a Professional</a></li>
+                            <li><a class="dropdown-item" href="register.html?type=client">As a Client/Job Poster</a></li>
+                        </ul>
+                    </div>
+
+                    <!-- Login Button -->
+                    <a href="login.html" class="btn btn-b2b-primary fw-bold">Login</a>
+
+                </div>
+
+            </div>
+        </div>
+    </nav>
+                <!--end of navbar-->
+
+    <div class="container-fluid my-5"></div>
+
+<!-- Carousel -->
+<div id="mainCarousel" class="carousel slide container-fluid p-0 bg-info-" data-bs-ride="carousel">
+
+  <!-- Indicators -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#mainCarousel" data-bs-slide-to="2"></button>
+  </div>
+
+  <!-- Slides -->
+  <div class="carousel-inner">
+
+    <!-- Slide 1 -->
+    <div class="carousel-item active">
+      <div class="container-fluid pb-5">
+        <div class="row align-items-center">
+          
+          <!-- Left: Text -->
+          <div class="col-md-6 text-start ">
+            <h1 class="display-2">BUILD A FUTURE<br>WITH TRUSTED <br>EXPERTS AT <br>REVOLUTIONplus PROPERTIES</h1>
+            <div class="mt-3">
+              <a href="#" class="btn btn-dark btn-lg me-2">DISCOVER NOW</a>
+              <a href="#" class="btn btn-outline-dark btn-lg">VIEW PROJECTS</a>
+            </div>
+          </div>
+          <!-- Right: Image -->
+          <div class="col-md-6 text-end">
+            <img src="images/image1.jpeg" loading="lazy" class="carousel-img" alt="Banner">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 2 -->
+    <div class="carousel-item">
+      <div class="container-fluid pb-5">
+        <div class="row align-items-center">
+
+          <!-- Left -->
+          <div class="col-md-6 text-start">
+            <h1 class="display-2">FIND YOUR DREAM<br>LUXURY HOME<br>WITH <br>ADRON HOMES & PROPERTIES</h1>
+            <div class="mt-3">
+              <a href="#" class="btn btn-dark btn-lg me-2">EXPLORE HOMES</a>
+              <a href="#" class="btn btn-outline-dark btn-lg">CONTACT AGENT</a>
+            </div>
+          </div>
+
+          <!-- Right -->
+          <div class="col-md-6 text-end">
+            <img src="images/image2.jpeg" loading="lazy" class="carousel-img" alt="Sale Banner">
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- Slide 3 (NEW) -->
+    <div class="carousel-item">
+      <div class="container-fluid pb-5">
+        <div class="row align-items-center">
+
+          <!-- Left -->
+          <div class="col-md-6 text-start">
+            <h1 class="display-2">BUILD SMART<br>LIVE BETTER<br>WITH <br>LANDWAY INVESTMENT ltd</h1>
+            <div class="mt-3">
+              <a href="#" class="btn btn-dark btn-lg me-2">DISCOVER NOW</a>
+              <a href="#" class="btn btn-outline-dark btn-lg">LEARN MORE</a>
+            </div>
+          </div>
+
+          <!-- Right -->
+          <div class="col-md-6 text-end">
+            <img src="images/image4.jpeg" loading="lazy" class="carousel-img" alt="Dream Banner">
+          </div>
+
+        </div>
+    </div>
+    </div>
+
+  </div>
+
+  <!-- Controls -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#mainCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+
+  <button class="carousel-control-next" type="button" data-bs-target="#mainCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+
+</div>
+        
+<div class="container my-5"></div>
+<div class="container my-5">
+    <h2 class="text-center fw-bold mb-4">What Do You Need?</h2>
+
+    <div class="row g-4">
+
+        <!-- Card 1 -->
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100 text-center p-3">
+                <img src="images/builders.png" class="img-fluid mb-3" alt="">
+                <h5 class="fw-bold">Hire Professionals</h5>
+                <p>Get qualified builders, artisans, and experts for any kind of project.</p>
+                <a href="#" class="btn btn-dark">Find Workers</a>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100 text-center p-3">
+                <img src="images/materials.png" class="img-fluid mb-3" alt="">
+                <h5 class="fw-bold">Buy Building Materials</h5>
+                <p>Quality cement, blocks, iron rods, tiles and more at good market price.</p>
+                <a href="#" class="btn btn-dark">Browse Materials</a>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100 text-center p-3">
+                <img src="images/company.png" class="img-fluid mb-3" alt="">
+                <h5 class="fw-bold">Full-Service Companies</h5>
+                <p>Meet organisations wey fit handle your whole project from start to finish.</p>
+                <a href="#" class="btn btn-dark">Talk to a Company</a>
+            </div>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100 text-center p-3">
+                <img src="images/community.png" class="img-fluid mb-3" alt="">
+                <h5 class="fw-bold">Join Community</h5>
+                <p>Ask questions, learn, share updates and connect with other builders.</p>
+                <a href="#" class="btn btn-dark">Join Now</a>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+      <div class="container my-5"></div>
+      <div class="container my-5">
+    <h2 class="text-center fw-bold mb-4">Why Choose Build2Build?</h2>
+
+    <div class="row g-4">
+
+        <!-- Feature 1 -->
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100 text-center p-4">
+                <i class="fa-solid fa-users-gear fa-3x mb-3 text-primary"></i>
+                <h5 class="fw-bold">Verified Professionals</h5>
+                <p>Only trusted builders, artisans, and companies dey available for your project.</p>
+            </div>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100 text-center p-4">
+                <i class="fa-solid fa-sack-dollar fa-3x mb-3 text-primary"></i>
+                <h5 class="fw-bold">Affordable Building Materials</h5>
+                <p>Get better prices on cement, blocks, rods and more from trusted sellers.</p>
+            </div>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100 text-center p-4">
+                <i class="fa-solid fa-bolt fa-3x mb-3 text-primary"></i>
+                <h5 class="fw-bold">Fast & Easy Connection</h5>
+                <p>Post your need and instantly connect with people wey fit deliver.</p>
+            </div>
+        </div>
+
+        <!-- Feature 4 -->
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100 text-center p-4">
+                <i class="fa-solid fa-building-flag fa-3x mb-3 text-primary"></i>
+                <h5 class="fw-bold">Everything in One Place</h5>
+                <p>From buying materials to hiring experts — all your building needs dey for one platform.</p>
+            </div>
+        </div>
+
+    </div>
+</div>
+    <div class="container my-5"></div>
+    <div class="container my-5">
+    <h2 class="text-center fw-bold mb-4">Recent Projects</h2>
+
+    <div class="row g-4">
+
+        <!-- Project 1 -->
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100">
+                <img src="images/image1.jpeg" 
+                     class="card-img-top" 
+                     style="height: 200px; object-fit: cover;" 
+                     alt="Project 1">
+                <div class="card-body text-center">
+                    <h5 class="fw-bold">Project by B2B</h5>
+                    <p class="text-muted mb-2">Abuja(Government house) / bungalow</p>
+                    <a href="#" class="btn btn-dark btn-sm">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2 -->
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100">
+                <img src="images/image2.jpeg" 
+                     class="card-img-top" 
+                     style="height: 200px; object-fit: cover;" 
+                     alt="Project 2">
+                <div class="card-body text-center">
+                    <h5 class="fw-bold">Project by B2B</h5>
+                    <p class="text-muted mb-2">Los Angles / story building</p>
+                    <a href="#" class="btn btn-dark btn-sm">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3 -->
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100">
+                <img src="images/image3.jpeg" 
+                     class="card-img-top" 
+                     style="height: 200px; object-fit: cover;" 
+                     alt="Project 3">
+                <div class="card-body text-center">
+                    <h5 class="fw-bold">Project by B2B</h5>
+                    <p class="text-muted mb-2">Imo state(Owerri) / manssion</p>
+                    <a href="#" class="btn btn-dark btn-sm">View Details</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 4 -->
+        <div class="col-md-3">
+            <div class="card shadow-sm border-0 h-100">
+                <img src="images/image4.jpeg" 
+                     class="card-img-top" 
+                     style="height: 200px; object-fit: cover;" 
+                     alt="Project 4">
+                <div class="card-body text-center">
+                    <h5 class="fw-bold">Project by B2B</h5>
+                    <p class="text-muted mb-2">Lagos(Ajah) / Upstairs</p>
+                    <a href="#" class="btn btn-dark btn-sm">View Details</a>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+    <div class="container my-5"></div>
+    <h2 class="text-center fw-bold mb-4">Featured Companies</h2>
+
+    <div class="row g-4 justify-content-center align-items-center">
+
+        <!-- Company 1 -->
+        <div class="col-6 col-md-3 col-lg-2 text-center">
+            <img src="images/company.1.jpeg" 
+                 class="img-fluid" 
+                 style="max-height: 300px; object-fit: contain;" 
+                 alt="Company 1">
+        </div>
+
+        <!-- Company 2 -->
+        <div class="col-6 col-md-3 col-lg-2 text-center">
+            <img src="images/company.2.jpeg" 
+                 class="img-fluid" 
+                 style="max-height: 300px; object-fit: contain;" 
+                 alt="Company 2">
+        </div>
+
+        <!-- Company 3 -->
+        <div class="col-6 col-md-3 col-lg-2 text-center">
+            <img src="images/company.3.jpeg" 
+                 class="img-fluid" 
+                 style="max-height: 300px; object-fit: contain;" 
+                 alt="Company 3">
+        </div>
+
+        <!-- Company 4 -->
+        <div class="col-6 col-md-3 col-lg-2 text-center">
+            <img src="images/company.4.jpeg" 
+                 class="img-fluid" 
+                 style="max-height: 300px; object-fit: contain;" 
+                 alt="Company 4">
+        </div>
+
+        <!-- Company 5 -->
+        <div class="col-6 col-md-3 col-lg-2 text-center">
+            <img src="images/company.5.jpeg" 
+                 class="img-fluid" 
+                 style="max-height: 300px; object-fit: contain;" 
+                 alt="Company 5">
+        </div>
+
+    </div>
+</div>
+
+    <div class="container my-5">
+    <h2 class="text-center fw-bold mb-4">What Our Clients Say</h2>
+
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        
+        <div class="carousel-inner">
+
+            <!-- Testimonial 1 -->
+            <div class="carousel-item active">
+                <div class="card shadow-sm border-0 p-4 text-center">
+                    <img src="images/testimonial1.jpg" class="rounded-circle mb-3" 
+                         style="width:80px; height:80px; object-fit:cover;" alt="Client 1">
+                    <p class="fst-italic">"Build2Build helped me find a professional builder for my house project fast and reliable. Highly recommended!"</p>
+                    <h6 class="fw-bold mt-2">Chidi Okafor</h6>
+                    <small class="text-muted">Lagos, Nigeria</small>
+                </div>
+            </div>
+
+            <!-- Testimonial 2 -->
+            <div class="carousel-item">
+                <div class="card shadow-sm border-0 p-4 text-center">
+                    <img src="images/testimonial2.jpg" class="rounded-circle mb-3" 
+                         style="width:80px; height:80px; object-fit:cover;" alt="Client 2">
+                    <p class="fst-italic">"I got all my building materials at great prices. The platform is very easy to use."</p>
+                    <h6 class="fw-bold mt-2">Ngozi Eze</h6>
+                    <small class="text-muted">Abuja, Nigeria</small>
+                </div>
+            </div>
+
+            <!-- Testimonial 3 -->
+            <div class="carousel-item">
+                <div class="card shadow-sm border-0 p-4 text-center">
+                    <img src="images/testimonial3.jpg" class="rounded-circle mb-3" 
+                         style="width:80px; height:80px; object-fit:cover;" alt="Client 3">
+                    <p class="fst-italic">"The full-service companies listed here helped me complete my dream project from start to finish."</p>
+                    <h6 class="fw-bold mt-2">Tunde Afolayan</h6>
+                    <small class="text-muted">Port Harcourt, Nigeria</small>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Carousel Controls -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+</div>
+
+     <div class="container my-5">
+    <div class="row align-items-center">
+
+        <!-- Dropdown for Dealers -->
+        <div class="col-md-8">
+            <div class="dropdown">
+                <button class="btn btn-outline-primary dropdown-toggle fw-bold w-100 text-start" 
+                        type="button" id="dealersDropdown" 
+                        data-bs-toggle="dropdown" aria-expanded="false">
+                    Select Dealer / Company
+                </button>
+                <ul class="dropdown-menu w-100" aria-labelledby="dealersDropdown">
+                    <li><a class="dropdown-item" href="#">CCTV Dealers</a></li>
+                    <li><a class="dropdown-item" href="#">Electricians</a></li>
+                    <li><a class="dropdown-item" href="#">Full-Service Companies</a></li>
+                    <li><a class="dropdown-item" href="#">Building Materials Vendors</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Search Field -->
+        <div class="col-md-4 mt-3 mt-md-0">
+            <div class="input-group">
+                <input type="text" class="form-control" placeholder="Search Dealers / Companies">
+                <button class="btn btn-primary" type="button">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+        </div>
+
+    </div>
+</div>
+     <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+
+        <div class="row">
+
+            <!-- Column 1: Build2Build Info -->
+            <div class="col-md-3 mb-4">
+                <h5 class="fw-bold">Build2Build</h5>
+                <p>Your trusted platform for building projects, materials, and professional connections.</p>
+            </div>
+
+            <!-- Column 2: Marketplace -->
+            <div class="col-md-2 mb-4">
+                <h6 class="fw-bold">Marketplace</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Browse Materials</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Browse Tools</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Post Item for Sale</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">View Service Listings</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Community -->
+            <div class="col-md-2 mb-4">
+                <h6 class="fw-bold">Community</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Discussion Forum</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Project Showcases</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Find Mentors/Experts</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Join Community</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Projects & Companies -->
+            <div class="col-md-3 mb-4">
+                <h6 class="fw-bold">Projects & Companies</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#" class="text-white text-decoration-none">Recent Projects</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Featured Companies</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Full-Service Companies</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">Dealers & Electricians</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 5: Contact -->
+            <div class="col-md-2 mb-4">
+                <h6 class="fw-bold">Contact</h6>
+                <ul class="list-unstyled">
+                    <li><a href="#contact" class="text-white text-decoration-none">Contact Us</a></li>
+                    <li><a href="mailto:info@build2build.com" class="text-white text-decoration-none">Email</a></li>
+                    <li><a href="tel:+2348012345678" class="text-white text-decoration-none">Phone</a></li>
+                    <li><a href="#" class="text-white text-decoration-none">FAQs</a></li>
+                </ul>
+            </div>
+
+        </div>
+
+        <hr class="bg-secondary">
+
+        <div class="row">
+            <div class="col text-center">
+                <p class="mb-0">&copy; 2025 Build2Build. All Rights Reserved.</p>
+                <p class="small fst-italic">Designed for builders, clients, and construction professionals.</p>
+            </div>
+        </div>
+
+    </div>
+</footer>
+
+
+
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
